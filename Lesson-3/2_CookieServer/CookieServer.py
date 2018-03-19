@@ -63,8 +63,8 @@ class NameHandler(BaseHTTPRequestHandler):
             try:
                 # 2. Extract and decode the cookie.
                 #    Get the cookie from the headers and extract its value
-                #    into a variable called 'name'.
                 c = cookies.SimpleCookie(self.headers['cookie'])
+                #    into a variable called 'name'.
                 name = c['yourname'].value
 
                 # Craft a message, escaping any HTML special chars in name.
